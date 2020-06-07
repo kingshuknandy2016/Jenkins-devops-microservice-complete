@@ -21,7 +21,7 @@ pipeline {
         }
         stage('Compile'){
             steps{
-                sh "cd currency-exchange-microservice"
+                sh "ls -la"
                 sh "mvn clean compile"
             }
         }
