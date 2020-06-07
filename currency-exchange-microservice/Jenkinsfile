@@ -28,7 +28,7 @@ pipeline {
         stage('Test'){
             steps{
                 sh """cd currency-exchange-microservice
-                mvn Test"""
+                mvn test"""
             }
         }
         stage('Integration Test'){
