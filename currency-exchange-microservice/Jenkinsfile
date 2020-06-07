@@ -21,10 +21,10 @@ pipeline {
         }
         stage('Compile'){
             steps{
-                sh "ls -la
+                sh """ls -la
                     cd currency-exchange-microservice
                     ls -la
-                    mvn clean compile"
+                    mvn clean compile"""
             }
         }
         stage('Test'){
