@@ -21,19 +21,18 @@ pipeline {
         }
         stage('Compile'){
             steps{
+                sh "cd currency-exchange-microservice"
                 sh "ls -la"
                 sh "mvn clean compile"
             }
         }
         stage('Test'){
             steps{
-                sh "cd currency-exchange-microservice"
                 sh "mvn Test"
             }
         }
         stage('Integration Test'){
             steps{
-                sh "cd currency-exchange-microservice"
                 sh "mvn failsafe:integration-test failsafe:verify"
             }
         }
